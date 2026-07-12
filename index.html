@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trade With Us — Telegram Signals</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&display=swap');
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #080D0A;
+            color: #fff;
+            font-family: 'Plus Jakarta Sans', 'Segoe UI', sans-serif;
+            line-height: 1.5;
+        }
+
+        .wrap {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Topbar */
+
+        .topbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 22px 0;
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: .08em;
+        }
+
+        .topbar .live {
+            color: #3EC97A;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .topbar .live .dot {
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background: #3EC97A;
+        }
+
+        .topbar .est {
+            color: #BFC9C3;
+        }
+
+        /* Hero */
+
+        .hero {
+            text-align: center;
+            padding: 36px 0 24px;
+        }
+
+        .avatar {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin: 0 auto 30px;
+            background: radial-gradient(circle at 35% 30%, #123a24, #081a10);
+            border: 3px solid #3EC97A;
+            box-shadow: 0 0 34px rgba(62, 201, 122, .35);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 52px;
+            font-weight: 800;
+            color: #3EC97A;
+        }
+
+        h1 {
+            font-size: clamp(32px, 6vw, 52px);
+            font-weight: 800;
+            letter-spacing: -.01em;
+        }
+
+        h1 .accent {
+            color: #3EC97A;
+        }
+
+        .lede {
+            max-width: 520px;
+            margin: 22px auto 0;
+            color: #BFC9C3;
+            font-size: 16px;
+        }
+
+        .cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 36px;
+            background: linear-gradient(180deg, #3EC97A, #2A9B5B);
+            color: #04140B;
+            font-weight: 800;
+            font-size: 16px;
+            padding: 17px 34px;
+            border-radius: 100px;
+            box-shadow: 0 0 30px rgba(62, 201, 122, .4);
+        }
+
+        .cta-note {
+            margin-top: 14px;
+            font-size: 12.5px;
+            color: #8B948E;
+        }
+
+        /* Stats */
+
+        .stats {
+            margin-top: 50px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 14px;
+        }
+
+        .stat {
+            background: #0D1512;
+            border: 1px solid #1B2A21;
+            border-radius: 12px;
+            padding: 24px 10px;
+            text-align: center;
+        }
+
+        .stat .num {
+            font-size: 30px;
+            font-weight: 800;
+            color: #3EC97A;
+        }
+
+        .stat .label {
+            margin-top: 6px;
+            font-size: 12px;
+            letter-spacing: .08em;
+            color: #8B948E;
+            text-transform: uppercase;
+        }
+
+        /* Feature cards */
+
+        .features {
+            margin-top: 60px;
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+
+        .feature {
+            background: #0D1512;
+            border: 1px solid #1B2A21;
+            border-radius: 14px;
+            padding: 26px;
+        }
+
+        .feature h3 {
+            font-size: 19px;
+            font-weight: 800;
+        }
+
+        .feature p {
+            margin-top: 8px;
+            color: #8B948E;
+            font-size: 14.5px;
+        }
+
+        /* Closing CTA */
+
+        .closing {
+            margin-top: 70px;
+            background: linear-gradient(160deg, rgba(62, 201, 122, .14), rgba(62, 201, 122, .02));
+            border: 1px solid rgba(62, 201, 122, .3);
+            border-radius: 18px;
+            padding: 48px 30px;
+            text-align: center;
+        }
+
+        .closing h2 {
+            font-size: clamp(24px, 4vw, 32px);
+            font-weight: 800;
+        }
+
+        .closing p {
+            margin-top: 10px;
+            color: #BFC9C3;
+        }
+
+        .closing .cta {
+            margin-top: 26px;
+        }
+
+        /* Disclaimer */
+
+        .disclaimer {
+            margin-top: 40px;
+            background: #0B110D;
+            border: 1px solid #1B2A21;
+            border-radius: 12px;
+            padding: 22px 24px;
+        }
+
+        .disclaimer h4 {
+            font-size: 13px;
+            font-weight: 800;
+            color: #8B948E;
+            margin-bottom: 8px;
+        }
+
+        .disclaimer p {
+            font-size: 12.5px;
+            color: #7A8480;
+            line-height: 1.7;
+        }
+
+        footer {
+            text-align: center;
+            padding: 34px 0 44px;
+            font-size: 12.5px;
+            color: #7A8480;
+        }
+
+        footer .brand {
+            color: #3EC97A;
+            font-weight: 700;
+        }
+
+        @media(max-width:600px) {
+            .stats {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+
+
+    <!-- Meta Pixel Code -->
+    <script>
+        ! function(f, b, e, v, n, t, s) {
+            if (f.fbq) return;
+            n = f.fbq = function() {
+                n.callMethod ?
+                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n;
+            n.push = n;
+            n.loaded = !0;
+            n.version = '2.0';
+            n.queue = [];
+            t = b.createElement(e);
+            t.async = !0;
+            t.src = v;
+            s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '961157163194668');
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=961157163194668&ev=PageView&noscript=1"
+/></noscript>
+    <!-- End Meta Pixel Code -->
+
+
+</head>
+
+<body>
+
+    <div class="wrap">
+
+        <div class="topbar">
+            <div class="live"><span class="dot"></span> LIVE SIGNALS</div>
+            <div class="est">Est. 2021</div>
+        </div>
+
+        <section class="hero">
+            <div class="avatar">
+                <img src="./image.jpg" width="120" style="border-radius:50%" />
+            </div>
+            <h1>Gujrati <span class="accent">Trader</span></h1>
+            <p class="lede">
+                Daily trading signals, market updates and clean trade setups — sent straight to your Telegram, every single day.
+            </p>
+            <a href="https://t.me/+JwQpJCX-dFkyNTM1" class="cta">🚀 Join on Telegram</a>
+            <div class="cta-note">Free to join · No spam · Leave anytime</div>
+
+            <div class="stats">
+                <div class="stat">
+                    <div class="num">10K+</div>
+                    <div class="label">Members</div>
+                </div>
+                <div class="stat">
+                    <div class="num">Daily</div>
+                    <div class="label">Signals</div>
+                </div>
+                <div class="stat">
+                    <div class="num">24/7</div>
+                    <div class="label">Updates</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="features">
+            <div class="feature">
+                <h3>Intraday Calls</h3>
+                <p>Equity and index calls with clear entry, stop-loss and target.</p>
+            </div>
+            <div class="feature">
+                <h3>Crypto Setups</h3>
+                <p>BTC, ETH and altcoin swing ideas with risk clearly marked.</p>
+            </div>
+            <div class="feature">
+                <h3>Market Updates</h3>
+                <p>Short daily notes on what's moving and what to watch.</p>
+            </div>
+            <div class="feature">
+                <h3>Community</h3>
+                <p>A place to ask questions and learn from other traders.</p>
+            </div>
+        </section>
+
+        <section class="closing">
+            <h2>Ready to trade smarter?</h2>
+            <p>Tap below and join the Telegram channel now.</p>
+            <a href="https://t.me/+JwQpJCX-dFkyNTM1" class="cta">🚀 Join on Telegram</a>
+        </section>
+
+        <div class="disclaimer">
+            <h4>Disclaimer</h4>
+            <p>
+                This page is for educational and informational purposes only. Trading involves risk and may not be suitable for everyone. Past performance does not guarantee future results, and nothing here is financial advice. Do your own research before making any
+                financial decisions.
+            </p>
+        </div>
+
+        <footer>
+            © 2026 <span class="brand">Gujrati Trader</span>
+        </footer>
+
+    </div>
+
+</body>
+
+</html>
